@@ -22,9 +22,14 @@ const icon = L.icon({
 })
 
 //creat and add marker
+const spanLat = document.querySelector('span[data-lat]')
+const spanLng = document.querySelector('span[data-lng]')
 
-L.marker([-27.2182154,-49.6452308], { icon: icon })
-  .addTo(map)
+L
+.marker([spanLat.dataset.lat,spanLng.dataset.lng], { icon })
+.addTo(map)
+
+  // images gallery
 
   function selectImage(event) {
       const button = event.currentTarget
