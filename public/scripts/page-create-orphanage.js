@@ -84,3 +84,22 @@ function toggleSelect(event){
     input.value = button.dataset.value
 }
 
+function validate(event) {
+console.log(event)
+    //pegando informações do lat e lng do front
+    const latValue= document.querySelector('[name=lat]').value;
+    const lngValue= document.querySelector('[name=lng]').value;
+    
+    //definindo variável como diferente de vazio
+    console.log("Está preenchido?", latValue != "")
+    const isFilled = latValue != "" && lngValue != "";
+
+
+    if(isFilled) {
+        alert('Seu formulário foi enviado')
+    }else{
+        event.preventDefault()
+        alert('Selecione um ponto no mapa')
+    }
+}
+
