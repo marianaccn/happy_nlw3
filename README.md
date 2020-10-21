@@ -32,3 +32,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
  - npm install
  - npm start
 
+3. Abrir página em localhost:5500
